@@ -34,7 +34,10 @@
 // 0
 // 4
 // 1 2 3 4
-
+// 2
+// Sample Output 2:
+// 1 2 3 4 5 6 7
+// 3 4 1 2
 
 
 public class Solution {  
@@ -60,7 +63,3 @@ public class Solution {
     }
 
 }
-// 2
-// Sample Output 2:
-// 1 2 3 4 5 6 7
-// 3 4 1 2
