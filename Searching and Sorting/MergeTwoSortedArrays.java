@@ -45,14 +45,14 @@
 
 public class Solution {  
 
-  public static int[] merge(int arr1[], int arr2[]) {
-		int i=0;
+        public static int[] merge(int arr1[], int arr2[]) {
+	        int i=0;
 		int j=0;
 		int k=0;
       
-        int s1=arr1.length;
-        int s2=arr2.length;
-		int ans[]=new int [s1+s2];
+                int s1=arr1.length;
+                int s2=arr2.length;
+	        int ans[]=new int [s1+s2];
 		
 		while(i < s1 && j < s2) {
 			
@@ -60,13 +60,12 @@ public class Solution {
 				 ans[k]=arr1[i];
 				 k++;
 				 i++;
-			}
-			else {
+			}else {
 				ans[k]=arr2[j];
 				k++;
-				j++;
-			}	
-		}
+	                 	j++;
+			     }	
+		    }
 		
       
 		while(i < s1) {
