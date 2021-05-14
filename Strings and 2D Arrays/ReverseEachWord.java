@@ -21,3 +21,43 @@
 // Always indent your code
 // Sample Output 2:
 // syawlA tnedni ruoy edoc
+
+public class Solution {
+
+	public static String reverseEachWord(String str) {
+		//Your code goes here
+        int len = str.length();
+        int currentWordStart=0;
+        String ans = "";
+        int i=0;
+        
+        for(;i<len;i++){
+            if(str.charAt(i)==' '){
+                //Reverse the word
+                int currentWordEnd=i-1;
+                 String reversedWord = "";
+                
+                for(int j=currentWordStart;j<=currentWordEnd;j++){
+                    reversedWord=str.charAt(j)+reversedWord;
+                }
+                
+                //Add it to the final String
+                ans+=reversedWord+' ';
+                currentWordStart=i+1;
+            }
+        }
+        // for adding last word
+        int currentWordEnd=i-1;
+        String reversedWord = "";
+        
+         for(int j=currentWordStart;j<=currentWordEnd;j++){
+                    reversedWord=str.charAt(j)+reversedWord;
+                }
+                //Add it to the ans String
+                ans+=reversedWord;
+        
+        return ans;
+        
+    }  
+        
+}      
