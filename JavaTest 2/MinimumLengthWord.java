@@ -20,28 +20,30 @@
 
 
 
+
 public class Solution {
 	
 	public static String minLengthWord(String input){
 		
-		int spaceIndex=0;
-		int startIndex=0;
-		int endIndex=0;
+		int space=0;
+		int start=0;
+		int end=0;
 		int minLength=Integer.MAX_VALUE;
 		for(int i=0;i<=input.length();i++) {
 			
-			if(i==input.length() || input.charAt(i)==' ' ) {
-				int length= i-spaceIndex;
+			if( i==input.length() || input.charAt(i)==' ' ) {
+				int length= i-space;
 				if(minLength > length) {
 					minLength=length;
-					startIndex=spaceIndex;
-					endIndex=i;
+					start=space;
+					end=i;
 				}
-				spaceIndex=i+1;
+				space=i+1;
 			}
 			
 			
 		}
-		return input.substring(startIndex,endIndex);
+		return input.substring(start,end);
 	}
 }
+
