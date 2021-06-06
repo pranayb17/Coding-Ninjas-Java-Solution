@@ -31,18 +31,16 @@
 public class Solution {
 
 	public static String removeAllOccurrencesOfChar(String str, char ch) {
-		// Your code goes here
-        
+	
         int len = str.length();
-        String x = "";
-        for(int i = 0; i<len; i++){
-            if (str.charAt(i) == ch){
-                  continue;
-            } else {
-            	x = x+str.charAt(i);
-            }
+        String ans = "";
+        
+        for(int i = 0; i < len; i++){
+            if (str.charAt(i) != ch){
+                  ans = ans + str.charAt(i);
+            } 
         }
-        return x;
+        return ans;
 	}
 
 }
