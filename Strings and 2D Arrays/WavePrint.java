@@ -45,42 +45,33 @@
 
 
 
+
 public class Solution {
-public static void wavePrint(int mat[][]){
-//		int i=mat.length;
-//		int j=mat[0].length;
-//      solved		
-		
-		
-		 
-        if(mat.length==0){
-            return;
+    
+public static void wavePrint(int mat[][]){	
+    if(mat.length == 0){
+        return;
+    }
+    
+    int row = mat.length;
+    int col = mat[0].length;
+    
+    for(int j = 0; j < col; j++) {
+        
+        if( j % 2 == 0){
+            for(int i = 0; i < row; i++) {
+		System.out.print(mat[i][j] + " ");			
+		}  
+            
+        }else{
+            for(int i = row - 1; i >= 0; i--) {
+		System.out.print(mat[i][j] + " ");   
+		}  
         }
-		
-		
-		for(int j=0;j<mat[0].length;j++) {
-			
-			if(j%2==0) {
-				
-				for(int i=0;i<mat.length;i++) {
-					
-					System.out.print(mat[i][j]+" ");			
-				}
-			
-			   }else {
-				   
-				   for(int i=mat.length-1;i>=0;i--) {
-					   
-					   System.out.print(mat[i][j]+" ");
-					   
-				   }
-				   
-				   
-			   }
-			
-			
-		}	
-		
-	}
+            
+    }
+     
+    	
+  }
 
 }
