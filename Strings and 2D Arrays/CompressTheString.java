@@ -31,22 +31,22 @@
 public class Solution {
 
 	public static String getCompressedString(String str) {
-		String x="";
-		int len=str.length()-1;
-		int count=1;
+		String ans = "";
+		int len = str.length()-1;
+		int count = 1;
 		
-		for(int i=1;i<=len;i++) {
+		for(int i = 1; i <= len; i++) {
 			
-			if(str.charAt(i)==str.charAt(i-1)) {
+			if(str.charAt(i) == str.charAt(i-1)) {
 				count++;
 				continue;
 			}
 			
-			x=x+str.charAt(i-1);
-			if(count>1) {
-				
-				x=x+count;
-				count=1;
+			ans = ans + str.charAt(i-1);
+            
+			if(count > 1) {
+				ans = ans +count;
+				count = 1;
 			}		
 		}  
 		
@@ -54,15 +54,13 @@ public class Solution {
 		
 		
 		if(count>1) {
-			
-			x=x+str.charAt(len)+count;
+			ans = ans + str.charAt(len)+count;
 		}
 		else {
-			
-			x=x+str.charAt(len); 
+			ans = ans + str.charAt(len); 
 		    }
 		
-		return (x);
+		return (ans);
 	}
 	
 }
