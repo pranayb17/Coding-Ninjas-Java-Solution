@@ -28,6 +28,7 @@
 // a3b2cd2e5
 
 
+
 public class Solution {
 
 	public static String getCompressedString(String str) {
@@ -53,7 +54,7 @@ public class Solution {
 		
 		
 		
-		if(count>1) {
+		if(count > 1) {
 			ans = ans + str.charAt(len)+count;
 		}
 		else {
