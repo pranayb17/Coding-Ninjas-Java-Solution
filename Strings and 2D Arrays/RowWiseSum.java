@@ -42,30 +42,29 @@
 // 10 30 18 -5 
 
 
-import java.util.*;
 public class Solution {
 
 	public static void rowWiseSum(int[][] arr) {
-	    int row=arr.length;
-        int cols=0;
-        if(arr.length!=0){
-		 cols=arr[0].length; 
-        }
-        if(row==0 || cols==0){
-            return;
-        }
-        else{
-        int su[]=new int[row];
-		int count[]=new int[row];
-        for(int i=0;i<row;i++){
-            for(int j=0;j<cols;j++){
-                count[i]+=arr[i][j];
+	    
+        if(arr.length == 0){
+            return ;
+        }else{
+            
+            int row = arr.length;
+            int cols = arr[0].length;
+            for(int i = 0; i < row; i++){
+                int sum = 0;
+                for(int j = 0; j < cols; j++){
+                    sum += arr[i][j];    
+                }
+                
+                System.out.print(sum +" ");    
             }
+                    
         }
-        for(int i=0;i<row;i++){
-            System.out.print(count[i]+" ");
-        }
-			 
+        
+        
+				 
 	}
-    }
+    
 }
